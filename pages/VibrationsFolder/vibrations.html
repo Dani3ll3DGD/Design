@@ -773,9 +773,9 @@
 
 	<div class="scroll-indicator">
 		<div class="scroll-dot active" data-section="hero"></div>
+		<div class="scroll-dot" data-section="disciplines"></div>
 		<div class="scroll-dot" data-section="artists"></div>
 		<div class="scroll-dot" data-section="gallery"></div>
-		<div class="scroll-dot" data-section="disciplines"></div>
 		<div class="scroll-dot" data-section="contact"></div>
 	</div>
 
@@ -841,6 +841,53 @@
 			<span>Graphic Design</span><span class="dot">◆</span>
 		</div>
 	</div>
+
+	<!-- DISCIPLINES (moved to top) -->
+	<section id="disciplines">
+		<div class="reveal" style="padding: 8rem 3rem 0;">
+			<p class="section-label">What We Showcase</p>
+			<h2 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(3rem,6vw,6rem); line-height:1;">DISCIPLINES</h2>
+		</div>
+
+		<div class="disciplines-grid reveal" style="margin: 4rem 3rem 8rem;">
+			<div class="discipline-card">
+				<div class="discipline-icon">🖌️</div>
+				<h3 class="discipline-name">Fine Art</h3>
+				<p class="discipline-count">14 Artists</p>
+				<p class="discipline-desc">From editorial ink drawings to digital concept art, our illustrators push the medium into extraordinary new territory.</p>
+			</div>
+			<div class="discipline-card">
+				<div class="discipline-icon">📷</div>
+				<h3 class="discipline-name">Photography</h3>
+				<p class="discipline-count">10 Artists</p>
+				<p class="discipline-desc">Documentary, fine art, fashion — our photographers capture the world with unflinching clarity and unexpected beauty.</p>
+			</div>
+			<div class="discipline-card">
+				<div class="discipline-icon">🎬</div>
+				<h3 class="discipline-name">Ceramics</h3>
+				<p class="discipline-count">8 Artists</p>
+				<p class="discipline-desc">Title sequences, brand films, data storytelling — motion artists who bring ideas to life through time and movement.</p>
+			</div>
+			<div class="discipline-card">
+				<div class="discipline-icon">🔤</div>
+				<h3 class="discipline-name">Graphic Design</h3>
+				<p class="discipline-count">9 Artists</p>
+				<p class="discipline-desc">Type designers and lettering artists forging new visual languages from the fundamental building blocks of communication.</p>
+			</div>
+			<div class="discipline-card">
+				<div class="discipline-icon">✏️</div>
+				<h3 class="discipline-name">Writing</h3>
+				<p class="discipline-count">4 Artists</p>
+				<p class="discipline-desc">Artists working at the frontier of computation, using code, simulation, and 3D tools to generate entirely new visual worlds.</p>
+			</div>
+			<div class="discipline-card">
+				<div class="discipline-icon">🌐</div>
+				<h3 class="discipline-name">Other</h3>
+				<p class="discipline-count">3 Artists</p>
+				<p class="discipline-desc">Physical mark-making in an increasingly digital world — painters, printmakers, and mixed media artists whose hands shape matter.</p>
+			</div>
+		</div>
+	</section>
 
 	<!-- ARTISTS SPOTLIGHT -->
 	<div id="artists">
@@ -1051,67 +1098,20 @@
 		</div>
 	</section>
 
-	<!-- DISCIPLINES -->
-	<section id="disciplines">
-		<div class="reveal">
-			<p class="section-label">What We Showcase</p>
-			<h2 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(3rem,6vw,6rem); line-height:1;">DISCIPLINES</h2>
-		</div>
+	<div class="form-group">
+		<label for="discipline">Discipline</label>
+		<select id="discipline">
+			<option value="" disabled selected>Select your medium</option>
+			<option>Illustration</option>
+			<option>Photography</option>
+			<option>Motion Design</option>
+			<option>Typography</option>
+			<option>3D / Generative Art</option>
+			<option>Painting & Print</option>
+			<option>Other</option>
+		</select>
+	</div>
 
-		<div class="disciplines-grid reveal">
-			<div class="discipline-card">
-				<div class="discipline-icon">🖌️</div>
-				<h3 class="discipline-name">Fine Art</h3>
-				<p class="discipline-count">14 Artists</p>
-				<p class="discipline-desc">From editorial ink drawings to digital concept art, our illustrators push the medium into extraordinary new territory.</p>
-			</div>
-			<div class="discipline-card">
-				<div class="discipline-icon">📷</div>
-				<h3 class="discipline-name">Photography</h3>
-				<p class="discipline-count">10 Artists</p>
-				<p class="discipline-desc">Documentary, fine art, fashion — our photographers capture the world with unflinching clarity and unexpected beauty.</p>
-			</div>
-			<div class="discipline-card">
-				<div class="discipline-icon">🎬</div>
-				<h3 class="discipline-name">Ceramics</h3>
-				<p class="discipline-count">8 Artists</p>
-				<p class="discipline-desc">Title sequences, brand films, data storytelling — motion artists who bring ideas to life through time and movement.</p>
-			</div>
-			<div class="discipline-card">
-				<div class="discipline-icon">🔤</div>
-				<h3 class="discipline-name">Graphic Design</h3>
-				<p class="discipline-count">9 Artists</p>
-				<p class="discipline-desc">Type designers and lettering artists forging new visual languages from the fundamental building blocks of communication.</p>
-			</div>
-			<div class="discipline-card">
-				<div class="discipline-icon">✏️</div>
-				<h3 class="discipline-name">Writing</h3>
-				<p class="discipline-count">4 Artists</p>
-				<p class="discipline-desc">Artists working at the frontier of computation, using code, simulation, and 3D tools to generate entirely new visual worlds.</p>
-			</div>
-			<div class="discipline-card">
-				<div class="discipline-icon">🌐</div>
-				<h3 class="discipline-name">other</h3>
-				<p class="discipline-count">3 Artists</p>
-				<p class="discipline-desc">Physical mark-making in an increasingly digital world — painters, printmakers, and mixed media artists whose hands shape matter.</p>
-			</div>
-		</div>
-	</section>
-
-	
-				<div class="form-group">
-					<label for="discipline">Discipline</label>
-					<select id="discipline">
-						<option value="" disabled selected>Select your medium</option>
-						<option>Illustration</option>
-						<option>Photography</option>
-						<option>Motion Design</option>
-						<option>Typography</option>
-						<option>3D / Generative Art</option>
-						<option>Painting & Print</option>
-						<option>Other</option>
-					</select>
-				
 	<!-- FOOTER -->
 	<footer>
 		<div class="footer-logo">VIBRATIONS</div>
@@ -1121,11 +1121,7 @@
 			<li><a href="about/index.html">About</a></li>
 			<li><a href="https://instagram.com" target="_blank">Instagram ↗</a></li>
 		</ul>
-<<<<<<< HEAD
 		<p class="footer-copy">© 2026 Vibrations Collective. All rights reserved.</p>
-=======
-		<p class="footer-copy">© 2026 VIBRATIONS Collective. All rights reserved.</p>
->>>>>>> ec6caf3bc13e476e891a7ba2c14e5e8b535219e7
 	</footer>
 
 	<script>
@@ -1147,7 +1143,7 @@
 		}, { threshold: 0.1 });
 		reveals.forEach(el => observer.observe(el));
 
-		const sections = ['hero', 'artists', 'gallery', 'disciplines', 'contact'];
+		const sections = ['hero', 'disciplines', 'artists', 'gallery', 'contact'];
 		const dots = document.querySelectorAll('.scroll-dot');
 		const sectionEls = sections.map(id => document.getElementById(id)).filter(Boolean);
 
