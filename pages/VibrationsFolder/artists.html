@@ -5,7 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<title>Artists — VIBRATIONS Collective</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+
 	<style>
 		:root {
 			--ink: #0a0a0f;
@@ -112,15 +115,15 @@
 		}
 
 		.page-title {
-			font-family: 'Bebas Neue', sans-serif;
+			font-family: 'fascinate', system-ui;
 			font-size: clamp(5rem, 10vw, 10rem);
 			line-height: 0.9;
-			letter-spacing: -0.02em;
+			letter-spacing: 0.02em;
 		}
 
 		.page-title em {
 			font-style: italic;
-			font-family: 'DM Serif Display', serif;
+			font-family: 'fascinate', system-ui;
 			color: var(--acid-yellow);
 		}
 
@@ -443,6 +446,10 @@
 		@media (max-width: 600px) {
 			.artists-grid { grid-template-columns: 1fr; }
 		}
+		.neg {
+			display: inline-block;
+			margin-left: -0.2em;
+		}
 	</style>
 </head>
 <body>
@@ -463,7 +470,7 @@
 	<header class="page-header">
 		<div class="page-header-left">
 			<p class="page-tag">— The Collective</p>
-			<h1 class="page-title">OUR<br><em>ARTISTS</em></h1>
+			<h1 class="page-title">OUR<br><em class="neg"> ARTISTS</em></h1>
 		</div>
 		<div class="page-header-right">
 			<p class="page-desc">44 independent artists, each pushing their discipline into uncharted territory. Browse by medium or scroll to discover the full collective.</p>
