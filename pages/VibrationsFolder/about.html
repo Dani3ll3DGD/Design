@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<title>About — VIBRATIONS Collective</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
 	<style>
 		:root {
 			--ink: #0a0a0f;
@@ -115,16 +115,16 @@
 		}
 
 		.about-title {
-			font-family: 'Bebas Neue', sans-serif;
+			font-family: "Fascinate", system-ui;
 			font-size: clamp(5rem, 11vw, 11rem);
 			line-height: 0.88;
-			letter-spacing: -0.02em;
+			letter-spacing: 0.04em;
 			margin-bottom: 3rem;
 		}
 
 		.about-title em {
 			font-style: italic;
-			font-family: 'DM Serif Display', serif;
+			font-family: "Fascinate", system-ui;
 			color: var(--acid-yellow);
 		}
 
@@ -548,6 +548,10 @@
 			.nav-links { display: none; }
 			footer { flex-direction: column; gap: 1.5rem; text-align: center; }
 		}
+		.neg {
+			display: inline-block;
+			margin-left: -0.18em;
+		}
 	</style>
 </head>
 <body>
@@ -568,7 +572,7 @@
 	<header class="about-hero">
 		<div class="hero-left">
 			<p class="page-tag">— Our Story</p>
-			<h1 class="about-title">ABOUT<br><em>VIBRATIONS</em></h1>
+			<h1 class="about-title">ABOUT<br><em class="neg">VIBRATIONS</em></h1>
 			<blockquote class="hero-quote">
 				"Art should make you feel something you don't have a name for yet."
 			</blockquote>
