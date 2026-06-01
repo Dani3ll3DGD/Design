@@ -1,3 +1,4 @@
+bash
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +55,7 @@
 
 		.nav-logo {
 			font-family: "Fascinate", system-ui;
-			font-size: 2rem;
+			font-size: clamp(1.2rem, 4vw, 2rem);
 			letter-spacing: 0.1em;
 			color: var(--cream);
 			text-decoration: none;
@@ -76,6 +77,54 @@
 		}
 		.nav-links a:hover, .nav-links a.active { opacity: 0.5; }
 
+		.nav-toggle {
+			display: none;
+			flex-direction: column;
+			gap: 5px;
+			cursor: pointer;
+			padding: 4px;
+			background: none;
+			border: none;
+		}
+		.nav-toggle span {
+			display: block;
+			width: 24px;
+			height: 2px;
+			background: var(--cream);
+			transition: all 0.3s;
+		}
+
+		.mobile-menu {
+			display: none;
+			position: fixed;
+			inset: 0;
+			background: var(--ink);
+			z-index: 99;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 2.5rem;
+		}
+		.mobile-menu.open { display: flex; }
+		.mobile-menu a {
+			color: var(--cream);
+			text-decoration: none;
+			font-family: 'Bebas Neue', sans-serif;
+			font-size: clamp(2.5rem, 12vw, 4rem);
+			letter-spacing: 0.1em;
+		}
+		.mobile-menu-close {
+			position: absolute;
+			top: 1.5rem;
+			right: 2rem;
+			background: none;
+			border: none;
+			color: var(--cream);
+			font-size: 2rem;
+			cursor: pointer;
+			font-family: 'Space Mono', monospace;
+		}
+
 		.cursor {
 			position: fixed;
 			width: 12px;
@@ -92,7 +141,7 @@
 
 		/* HERO */
 		.about-hero {
-			min-height: 100vh;
+			min-height: 100svh;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			border-bottom: 1px solid rgba(245,240,232,0.1);
@@ -117,7 +166,7 @@
 
 		.about-title {
 			font-family: "Fascinate", system-ui;
-			font-size: clamp(5rem, 11vw, 11rem);
+			font-size: clamp(3rem, 9vw, 11rem);
 			line-height: 0.88;
 			letter-spacing: 0.04em;
 			margin-bottom: 3rem;
@@ -131,7 +180,7 @@
 
 		.hero-quote {
 			font-family: 'DM Serif Display', serif;
-			font-size: 1.5rem;
+			font-size: clamp(1rem, 2.5vw, 1.5rem);
 			line-height: 1.5;
 			font-style: italic;
 			color: rgba(245,240,232,0.7);
@@ -144,21 +193,18 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
-			padding: 0rem 18rem 5rem;
+			padding: 5rem 3rem;
 			gap: 4rem;
 		}
 
 		.about-intro {
-			font-size: 0.92rem;
+			font-size: clamp(0.78rem, 1.5vw, 0.92rem);
 			line-height: 2;
 			color: rgba(245,240,232,0.65);
 			max-width: 44ch;
 		}
 
-		.about-intro strong {
-			color: var(--cream);
-			font-weight: 700;
-		}
+		.about-intro strong { color: var(--cream); font-weight: 700; }
 
 		.founded-line {
 			display: flex;
@@ -168,7 +214,7 @@
 
 		.founded-year {
 			font-family: 'Bebas Neue', sans-serif;
-			font-size: 6rem;
+			font-size: clamp(3rem, 7vw, 6rem);
 			color: rgba(245,240,232,0.08);
 			line-height: 1;
 		}
@@ -181,12 +227,30 @@
 			line-height: 1.8;
 		}
 
+		/* MARQUEE */
+		.marquee-strip {
+			background: var(--acid-yellow);
+			color: var(--ink);
+			padding: 0.9rem 0;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		.marquee-inner {
+			display: inline-block;
+			animation: marquee 20s linear infinite;
+			font-family: 'Bebas Neue', sans-serif;
+			font-size: clamp(1rem, 2.5vw, 1.4rem);
+			letter-spacing: 0.05em;
+		}
+		.marquee-inner span { margin: 0 3rem; }
+		.marquee-inner .dot { color: var(--coral); margin: 0 1rem; }
+
 		/* MANIFESTO */
 		.manifesto {
-			padding: 8rem 3rem;
+			padding: 6rem 3rem;
 			border-bottom: 1px solid rgba(245,240,232,0.1);
 			display: grid;
-			grid-template-columns: 280px 1fr;
+			grid-template-columns: 220px 1fr;
 			gap: 6rem;
 		}
 
@@ -199,28 +263,23 @@
 
 		.manifesto-title {
 			font-family: 'Bebas Neue', sans-serif;
-			font-size: clamp(3rem, 6vw, 6rem);
+			font-size: clamp(2.5rem, 6vw, 6rem);
 			line-height: 1;
 			margin-bottom: 3rem;
 		}
 
-		.manifesto-body {
-			display: flex;
-			flex-direction: column;
-			gap: 2rem;
-		}
+		.manifesto-body { display: flex; flex-direction: column; gap: 2rem; }
 
 		.manifesto-para {
 			font-size: 0.88rem;
 			line-height: 2;
 			color: rgba(245,240,232,0.65);
 		}
-
 		.manifesto-para strong { color: var(--cream); font-weight: 700; }
 
 		.manifesto-pull {
 			font-family: 'DM Serif Display', serif;
-			font-size: 2rem;
+			font-size: clamp(1.2rem, 2.5vw, 2rem);
 			line-height: 1.4;
 			font-style: italic;
 			color: var(--acid-yellow);
@@ -229,12 +288,7 @@
 			border-bottom: 1px solid rgba(245,240,232,0.1);
 		}
 
-		/* TEAM */
-		.team-section {
-			padding: 8rem 3rem;
-			border-bottom: 1px solid rgba(245,240,232,0.1);
-		}
-
+		/* SECTION LABELS */
 		.section-label {
 			font-size: 0.6rem;
 			letter-spacing: 0.35em;
@@ -245,9 +299,15 @@
 
 		.section-title {
 			font-family: 'Bebas Neue', sans-serif;
-			font-size: clamp(3rem, 6vw, 6rem);
+			font-size: clamp(2.5rem, 6vw, 6rem);
 			line-height: 1;
 			margin-bottom: 4rem;
+		}
+
+		/* TEAM */
+		.team-section {
+			padding: 6rem 3rem;
+			border-bottom: 1px solid rgba(245,240,232,0.1);
 		}
 
 		.team-grid {
@@ -262,16 +322,14 @@
 			overflow: hidden;
 			transition: background 0.3s;
 		}
-
 		.team-card:hover { background: rgba(245,240,232,0.03); }
 
 		.team-visual {
-			height: 200px;
+			height: 180px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			font-size: 6rem;
-			position: relative;
+			font-size: clamp(3rem, 6vw, 6rem);
 		}
 
 		.tv1 { background: linear-gradient(135deg, var(--coral), #800); }
@@ -279,11 +337,11 @@
 		.tv3 { background: linear-gradient(135deg, var(--mint), #030); }
 		.tv4 { background: linear-gradient(135deg, var(--violet), #200040); }
 
-		.team-body { padding: 2rem; }
+		.team-body { padding: 1.5rem; }
 
 		.team-name {
 			font-family: 'DM Serif Display', serif;
-			font-size: 1.4rem;
+			font-size: clamp(1rem, 2vw, 1.4rem);
 			margin-bottom: 0.3rem;
 		}
 
@@ -303,7 +361,7 @@
 
 		/* TIMELINE */
 		.timeline-section {
-			padding: 8rem 3rem;
+			padding: 6rem 3rem;
 			border-bottom: 1px solid rgba(245,240,232,0.1);
 		}
 
@@ -316,18 +374,16 @@
 		.timeline::before {
 			content: '';
 			position: absolute;
-			left: 0;
-			top: 0;
-			bottom: 0;
+			left: 0; top: 0; bottom: 0;
 			width: 1px;
 			background: rgba(245,240,232,0.1);
 		}
 
 		.timeline-item {
 			display: grid;
-			grid-template-columns: 120px 1fr;
-			gap: 3rem;
-			padding: 3rem 0;
+			grid-template-columns: 100px 1fr;
+			gap: 2rem;
+			padding: 2.5rem 0;
 			border-bottom: 1px solid rgba(245,240,232,0.06);
 			position: relative;
 		}
@@ -336,7 +392,7 @@
 			content: '';
 			position: absolute;
 			left: -2.3rem;
-			top: 3.4rem;
+			top: 2.9rem;
 			width: 10px;
 			height: 10px;
 			border-radius: 50%;
@@ -345,7 +401,7 @@
 
 		.timeline-year {
 			font-family: 'Bebas Neue', sans-serif;
-			font-size: 2.5rem;
+			font-size: clamp(1.5rem, 3vw, 2.5rem);
 			color: var(--acid-yellow);
 			opacity: 0.5;
 			line-height: 1;
@@ -366,7 +422,7 @@
 
 		/* VALUES */
 		.values-section {
-			padding: 8rem 3rem;
+			padding: 6rem 3rem;
 			border-bottom: 1px solid rgba(245,240,232,0.1);
 		}
 
@@ -376,8 +432,6 @@
 			gap: 3rem;
 			margin-top: 4rem;
 		}
-
-		
 
 		.value-num {
 			font-family: 'Bebas Neue', sans-serif;
@@ -390,7 +444,7 @@
 
 		.value-name {
 			font-family: 'DM Serif Display', serif;
-			font-size: 1.6rem;
+			font-size: clamp(1.2rem, 2vw, 1.6rem);
 			margin-bottom: 0.75rem;
 		}
 
@@ -404,11 +458,11 @@
 		.about-cta {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			min-height: 50vh;
+			min-height: 40vh;
 		}
 
 		.cta-panel {
-			padding: 6rem 3rem;
+			padding: 5rem 3rem;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -416,7 +470,6 @@
 			border-right: 1px solid rgba(245,240,232,0.1);
 			transition: background 0.3s;
 		}
-
 		.cta-panel:last-child { border-right: none; }
 		.cta-panel:hover { background: rgba(245,240,232,0.03); }
 
@@ -429,7 +482,7 @@
 
 		.cta-panel-title {
 			font-family: 'Bebas Neue', sans-serif;
-			font-size: clamp(2.5rem, 4vw, 4.5rem);
+			font-size: clamp(2rem, 4vw, 4.5rem);
 			line-height: 0.95;
 		}
 
@@ -460,12 +513,7 @@
 			transition: transform 0.2s, background 0.2s;
 			align-self: flex-start;
 		}
-
-		.btn-primary:hover {
-			background: var(--coral);
-			color: var(--cream);
-			transform: translate(-3px, -3px);
-		}
+		.btn-primary:hover { background: var(--coral); color: var(--cream); transform: translate(-3px, -3px); }
 
 		.btn-outline {
 			display: inline-block;
@@ -479,28 +527,7 @@
 			transition: all 0.2s;
 			align-self: flex-start;
 		}
-
 		.btn-outline:hover { background: var(--cream); color: var(--ink); }
-
-		/* MARQUEE */
-		.marquee-strip {
-			background: var(--acid-yellow);
-			color: var(--ink);
-			padding: 0.9rem 0;
-			overflow: hidden;
-			white-space: nowrap;
-		}
-
-		.marquee-inner {
-			display: inline-block;
-			animation: marquee 20s linear infinite;
-			font-family: 'Bebas Neue', sans-serif;
-			font-size: 1.4rem;
-			letter-spacing: 0.05em;
-		}
-
-		.marquee-inner span { margin: 0 3rem; }
-		.marquee-inner .dot { color: var(--coral); margin: 0 1rem; }
 
 		/* FOOTER */
 		footer {
@@ -509,49 +536,75 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			flex-wrap: wrap;
+			gap: 1.5rem;
 		}
-
 		.footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.1em; }
-		.footer-links { display: flex; gap: 2rem; list-style: none; }
+		.footer-links { display: flex; flex-wrap: wrap; gap: 2rem; list-style: none; }
 		.footer-links a {
-			color: var(--cream);
-			text-decoration: none;
-			font-size: 0.65rem;
-			letter-spacing: 0.2em;
-			text-transform: uppercase;
-			opacity: 0.4;
-			transition: opacity 0.2s;
+			color: var(--cream); text-decoration: none; font-size: 0.65rem;
+			letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.4; transition: opacity 0.2s;
 		}
 		.footer-links a:hover { opacity: 1; }
 		.footer-copy { font-size: 0.65rem; opacity: 0.3; letter-spacing: 0.05em; }
 
-		@keyframes fadeUp {
-			from { opacity: 0; transform: translateY(30px); }
-			to { opacity: 1; transform: translateY(0); }
-		}
-		@keyframes marquee {
-			from { transform: translateX(0); }
-			to { transform: translateX(-50%); }
-		}
+		@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+		@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 		.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s, transform 0.8s; }
 		.reveal.visible { opacity: 1; transform: translateY(0); }
+		.neg { display: inline-block; margin-left: -0.18em; }
 
-		@media (max-width: 900px) {
-			.about-hero { grid-template-columns: 1fr; }
-			.hero-left { border-right: none; }
-			.manifesto { grid-template-columns: 1fr; gap: 2rem; }
-			.team-grid { grid-template-columns: 1fr 1fr; }
-			.values-grid { grid-template-columns: 1fr 1fr; }
-			.about-cta { grid-template-columns: 1fr; }
-			.cta-panel { border-right: none; border-bottom: 1px solid rgba(245,240,232,0.1); }
-			nav { padding: 1.5rem 2rem; }
-			.nav-links { display: none; }
-			footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+		/* =====================
+		   RESPONSIVE BREAKPOINTS
+		   ===================== */
+
+		@media (max-width: 1024px) {
+			.team-grid { grid-template-columns: repeat(3, 1fr); }
+			.values-grid { grid-template-columns: repeat(2, 1fr); }
 		}
-		.neg {
-			display: inline-block;
-			margin-left: -0.18em;
+
+		@media (max-width: 768px) {
+			nav { padding: 1.2rem 1.5rem; }
+			.nav-links { display: none; }
+			.nav-toggle { display: flex; }
+			.cursor { display: none; }
+
+			.about-hero { grid-template-columns: 1fr; min-height: auto; }
+			.hero-left { padding: 7rem 1.5rem 3rem; border-right: none; border-bottom: 1px solid rgba(245,240,232,0.1); }
+			.hero-right { padding: 3rem 1.5rem; gap: 2.5rem; }
+
+			.manifesto { grid-template-columns: 1fr; gap: 1.5rem; padding: 4rem 1.5rem; }
+			.team-section { padding: 4rem 1.5rem; }
+			.team-grid { grid-template-columns: repeat(2, 1fr); }
+			.timeline-section { padding: 4rem 1.5rem; }
+			.timeline-item { grid-template-columns: 70px 1fr; gap: 1.5rem; }
+			.values-section { padding: 4rem 1.5rem; }
+			.values-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+			.about-cta { grid-template-columns: 1fr; }
+			.cta-panel { padding: 4rem 1.5rem; border-right: none; border-bottom: 1px solid rgba(245,240,232,0.1); }
+			footer { padding: 2rem 1.5rem; }
+		}
+
+		@media (max-width: 480px) {
+			.hero-left { padding: 6.5rem 1.25rem 2.5rem; }
+			.hero-right { padding: 2.5rem 1.25rem; }
+			.manifesto { padding: 3rem 1.25rem; }
+			.team-grid { grid-template-columns: 1fr 1fr; }
+			.team-body { padding: 1.25rem 1rem; }
+			.timeline-section { padding: 3rem 1.25rem; }
+			.timeline-item { grid-template-columns: 60px 1fr; gap: 1rem; }
+			.values-section { padding: 3rem 1.25rem; }
+			.values-grid { grid-template-columns: 1fr; gap: 2rem; }
+			.cta-panel { padding: 3rem 1.25rem; }
+			footer { padding: 2rem 1.25rem; }
+			.footer-links { gap: 1rem; }
+		}
+
+		@media (max-width: 360px) {
+			.hero-left, .hero-right { padding-left: 1rem; padding-right: 1rem; }
+			.manifesto, .team-section, .timeline-section, .values-section { padding-left: 1rem; padding-right: 1rem; }
+			footer { padding: 1.5rem 1rem; }
 		}
 	</style>
 </head>
@@ -559,14 +612,23 @@
 
 	<div class="cursor" id="cursor"></div>
 
+	<div class="mobile-menu" id="mobileMenu">
+		<button class="mobile-menu-close" id="menuClose">✕</button>
+		<a href="artists.html" onclick="closeMobileMenu()">Artists</a>
+		<a href="gallery.html" onclick="closeMobileMenu()">Gallery</a>
+		<a href="about.html" onclick="closeMobileMenu()">About</a>
+	</div>
+
 	<nav>
 		<a href="vibrations.html" class="nav-logo">VIBRATIONS</a>
 		<ul class="nav-links">
 			<li><a href="artists.html">Artists</a></li>
 			<li><a href="gallery.html">Gallery</a></li>
 			<li><a href="about.html" class="active">About</a></li>
-			
 		</ul>
+		<button class="nav-toggle" id="menuToggle" aria-label="Open menu">
+			<span></span><span></span><span></span>
+		</button>
 	</nav>
 
 	<!-- HERO -->
@@ -580,13 +642,11 @@
 		</div>
 		<div class="hero-right">
 			<p class="about-intro">
-				<strong>VIBRATIONS; a curated artist collective.</strong>  We're Booklab - a small, tight-knit group responisble for this years Vibrations Magazine! Much like our publication, we're quite a vibrant group. We are diligent, dedicated, and passionate; Both in and out of class. We hope you enjoy our hard work, and more importantly: the hard work of the artists.			</p>
-
+				<strong>VIBRATIONS; a curated artist collective.</strong> We're Booklab — a small, tight-knit group responsible for this year's Vibrations Magazine! Much like our publication, we're quite a vibrant group. We are diligent, dedicated, and passionate; both in and out of class. We hope you enjoy our hard work, and more importantly: the hard work of the artists.
 			</p>
 			<div class="founded-line">
 				<p class="founded-year">1963</p>
 				<p class="founded-text">Founded in 1963, VIBRATIONS is a collective of independent artists across 5 disciplines, united by a shared vision to create bold, unconventional art that moves people emotionally and culturally.</p>
-			
 			</div>
 		</div>
 	</header>
@@ -616,19 +676,23 @@
 			<h2 class="manifesto-title">WHY WE EXIST</h2>
 			<div class="manifesto-body">
 				<p class="manifesto-para">
-                    Evcc Vibrations exists to create art that moves people emotionally, culturally, and creatively. We believe art is more than expression — it is energy, storytelling, and connection that can inspire new perspectives and bring communities together.	</p>
+					EVCC Vibrations exists to create art that moves people emotionally, culturally, and creatively. We believe art is more than expression — it is energy, storytelling, and connection that can inspire new perspectives and bring communities together.
+				</p>
 				<p class="manifesto-para">
-                    Our purpose is to produce meaningful creative experiences that amplify authentic voices, challenge convention, and leave a lasting impact through visual, experiential art.			</p>
+					Our purpose is to produce meaningful creative experiences that amplify authentic voices, challenge convention, and leave a lasting impact through visual, experiential art.
+				</p>
 				<blockquote class="manifesto-pull">
-                   We exist to transform ideas into living art that people can feel, remember, and carry with them long after the moment ends.			</blockquote>
+					We exist to transform ideas into living art that people can feel, remember, and carry with them long after the moment ends.
+				</blockquote>
 				<p class="manifesto-para">
 					<strong>As we continue to grow</strong> through visual art, production, and immersive experiences, we transform raw ideas into vibrations that carry meaning, energy, and story. Every project we create is rooted in authenticity, collaboration, and the desire to leave a lasting emotional impact.
 				</p>
 				<p class="manifesto-para">
-                    Because art is more than entertainment. </p>
-						It is Connection.</p>
-						It is Movement.</p>
-						It is Vibrations.				
+					Because art is more than entertainment.<br>
+					It is Connection.<br>
+					It is Movement.<br>
+					It is Vibrations.
+				</p>
 			</div>
 		</div>
 	</section>
@@ -637,7 +701,6 @@
 	<section class="values-section reveal">
 		<p class="section-label">What We Stand For</p>
 		<h2 class="section-title">OUR VALUES</h2>
-
 		<div class="values-grid">
 			<div class="value-item">
 				<div class="value-num">01</div>
@@ -659,31 +722,28 @@
 				<h3 class="value-name">Freedom Without Limits</h3>
 				<p class="value-desc">We encourage bold thinking, artistic freedom, and the courage to create beyond expectations, trends, or convention.</p>
 			</div>
-		
+		</div>
 	</section>
 
 	<!-- TEAM -->
 	<section class="team-section reveal">
 		<p class="section-label">The People</p>
 		<h2 class="section-title">OUR TEAM</h2>
-
 		<div class="team-grid">
 			<div class="team-card">
 				<div class="team-visual tv4">L</div>
 				<div class="team-body">
 					<h3 class="team-name">Laura Atehortua Martinez</h3>
 					<p class="team-role">Art Director</p>
-					<p class="team-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p class="team-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
 			</div>
-            
 			<div class="team-card">
 				<div class="team-visual tv3">D</div>
 				<div class="team-body">
 					<h3 class="team-name">Danielle Dale</h3>
 					<p class="team-role">Program Master & Chief Editor</p>
-					<p class="team-bio">Hi everyone! My name is Danielle, and I am the Program Master for this year's Vibration Magazine. what you see on screen is everything I have coded into this website! I am currently studing Graphic & Web Design at EVCC, then plan to transfer to a 4-year university to continue my studies. I am passionate about art, design, and creativity in all forms. I am excited to be a part of this project and to see the amazing work that our team and artists created! I have three huskies and I enjoy a good book, movie, or video game when I have free time.
-                    </p>
+					<p class="team-bio">Hi everyone! My name is Danielle, and I am the Program Master for this year's Vibration Magazine. I am currently studying Graphic & Web Design at EVCC. I am passionate about art, design, and creativity in all forms. I have three huskies and I enjoy a good book, movie, or video game when I have free time.</p>
 				</div>
 			</div>
 			<div class="team-card">
@@ -691,7 +751,7 @@
 				<div class="team-body">
 					<h3 class="team-name">Paulina Guzman Benavides</h3>
 					<p class="team-role">Marketing Designer</p>
-					<p class="team-bio"> I'm Paulina, a Graphic Designer with a passion for all things pink. During my time with Vibrations, I served as the Social Media and Marketing Manager, where I focused on promoting the magazine and our call to artists. Currently, I am pursuing my degree in Graphic and Web Design with plans to transfer to a university to complete my bachelor's. Outside of design, I enjoy exploring the outdoors and relaxing at home with my oocat, Blitz!</p>
+					<p class="team-bio">I'm Paulina, a Graphic Designer with a passion for all things pink. I served as the Social Media and Marketing Manager, focusing on promoting the magazine and our call to artists. Outside of design, I enjoy exploring the outdoors and relaxing at home with my cat, Blitz!</p>
 				</div>
 			</div>
 			<div class="team-card">
@@ -699,121 +759,119 @@
 				<div class="team-body">
 					<h3 class="team-name">Brooke Howard</h3>
 					<p class="team-role">Production Designer</p>
-					<p class="team-bio">I am a Digital artist and photographer based in Everett, Washington. I founded BaBBled LLC out of a need to build something that was fully mine. During the day I study production at EvCC's ATA program, and after hours I am back at it; code, cameras, and whatever the Pacific Northwest decides to throw at me that week. I rockhound creek beds and forage timber edges. I fish slow water and chase light until it does something worth keeping. Nature was my first studio and honestly still my best one. My work lives in digital illustration, photography, drawings, and paintings. What drives me is the emotional current running underneath a piece -- what it asks of the viewer before they even know they are being asked. Stillness with something underneath it. Art that does not explain itself but makes you feel the weight of it anyway.</p>
+					<p class="team-bio">I am a digital artist and photographer based in Everett, Washington. I study production at EvCC's ATA program. I rockhound creek beds and forage timber edges. My work lives in digital illustration, photography, drawings, and paintings.</p>
 				</div>
 			</div>
-            <div class="team-card">
+			<div class="team-card">
 				<div class="team-visual tv4">J</div>
 				<div class="team-body">
 					<h3 class="team-name">Jovelle Lee</h3>
 					<p class="team-role">Art Director</p>
-					<p class="team-bio">My name is Jovelle and I am a digital artist based in Everett, WA and currently studing graphic design at EVCC. I am one third of the Art direction team for our Vibrations and helped to bring our collective, creatrive visions to life. When I'm not focused on schoolwork, I'm running my vintage resell business or experimenting with many artistic mediums, such as painting, collage, ceramics, candle making, linocut printing, embroidery, and punch needle art.</p>
+					<p class="team-bio">My name is Jovelle and I am a digital artist based in Everett, WA. I am one third of the Art Direction team. When I'm not focused on schoolwork, I'm running my vintage resell business or experimenting with many artistic mediums.</p>
 				</div>
-		</div>
-        
-        <div class="team-card">
+			</div>
+			<div class="team-card">
 				<div class="team-visual tv1">M</div>
 				<div class="team-body">
 					<h3 class="team-name">Maxim Maychuk-Volchkova</h3>
 					<p class="team-role">Project Manager</p>
-					<p class="team-bio">I'm Maxim. Most people call me Max. I am one half of the Project Management team for Booklab this year. I helped organize files and proofread text within Vibrations Magazine. I'm working towards my Graphic Design degree; I enjoy typography and illustration. I like strange art, bad music, and black tea. I love my ungrateful son (cat) Benji.</p>
+					<p class="team-bio">I'm Maxim. Most people call me Max. I helped organize files and proofread text within Vibrations Magazine. I'm working towards my Graphic Design degree. I love my ungrateful son (cat) Benji.</p>
 				</div>
-             </div>
-             <div class="team-card">
+			</div>
+			<div class="team-card">
 				<div class="team-visual tv4">B</div>
 				<div class="team-body">
 					<h3 class="team-name">Bianca Moreno</h3>
 					<p class="team-role">Project Manager</p>
-					<p class="team-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p class="team-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
-            </div>
-            <div class="team-card">
+			</div>
+			<div class="team-card">
 				<div class="team-visual tv4">A</div>
 				<div class="team-body">
 					<h3 class="team-name">Aly Ovellette</h3>
 					<p class="team-role">Editor</p>
-					<p class="team-bio">I'm Aly. I'm one of the editors. I handled the bulk of sequencing and putting together half of the photography section, including the 4-page centerfold spread. I'm currently working on a Graphic Design degree and plan to transfer into UW's animation track next spring. My favorite animal is the orca, and my favorite color is a soft baby pink.</p>
+					<p class="team-bio">I'm Aly. I handled the bulk of sequencing and putting together half of the photography section, including the 4-page centerfold spread. My favorite animal is the orca, and my favorite color is a soft baby pink.</p>
 				</div>
-			 </div>	
-			   <div class="team-card">
+			</div>
+			<div class="team-card">
 				<div class="team-visual tv4">J</div>
 				<div class="team-body">
 					<h3 class="team-name">Jocelyn Payne</h3>
 					<p class="team-role">Art Director</p>
-					<p class="team-bio">Hi, my name is Jocelyn. I'm part of the art direction team for this project. I took on the task of designing the inner pages for this publication with the different shapes and the layout of the them. I'm currently enrolled at EVCC for the Graphic Design Certificate Program. I have a passion for art and finding new hobbies and interests!</p>
+					<p class="team-bio">Hi, my name is Jocelyn. I'm part of the art direction team. I took on the task of designing the inner pages for this publication. I'm currently enrolled at EVCC for the Graphic Design Certificate Program.</p>
 				</div>
-			 </div>	
-			   <div class="team-card">
+			</div>
+			<div class="team-card">
 				<div class="team-visual tv2">S</div>
 				<div class="team-body">
 					<h3 class="team-name">Skylah Robin-Tolentino</h3>
 					<p class="team-role">Production Designer</p>
-					<p class="team-bio">My name is Skylah, and I am part of the production design team, where I've helped with page layouts and created flyers for the marketing team. I'm a Graphic Design student who loves finding new ways to bring ideas to life through art and design. Most of the time, you can find me either glued to screen creating something new or buried in a sketchbook trying to figure out my next idea. I'm inspired by everyday life and enjoy adding a little whimsy I can.</p>
+					<p class="team-bio">My name is Skylah, and I am part of the production design team, where I've helped with page layouts and created flyers for the marketing team. Most of the time, you can find me glued to a screen creating something new or buried in a sketchbook.</p>
 				</div>
 			</div>
-			 <div class="team-card">
+			<div class="team-card">
 				<div class="team-visual tv2">C</div>
 				<div class="team-body">
 					<h3 class="team-name">Chris Larson</h3>
 					<p class="team-role">Advisor</p>
-					<p class="team-bio"> Chris is the full-time Graphic Design instructor at EVCC and serves as director of the Russell Day Gallery. He is also the faculty advisor for Graph252:Booklab, where students produce Vibrations in both print and digital formats. Driven by equal parts curiosity and creative energy, Chris can often be found near Everett Marina, happily watching kite-sufers carve across the water while he drifts into an afternoon nap on a nearby park bench.</p>
+					<p class="team-bio">Chris is the full-time Graphic Design instructor at EVCC and serves as director of the Russell Day Gallery. He is also the faculty advisor for Graph 252: Booklab, where students produce Vibrations in both print and digital formats.</p>
 				</div>
-				 </div>
+			</div>
+		</div>
 	</section>
-	
 
 	<!-- TIMELINE -->
 	<section class="timeline-section reveal">
 		<p class="section-label">How We Got Here</p>
 		<h2 class="section-title">TIMELINE</h2>
-
 		<div class="timeline">
 			<div class="timeline-item">
 				<div class="timeline-year">1963</div>
 				<div class="timeline-content">
 					<h3>Founded</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
 			</div>
 			<div class="timeline-item">
 				<div class="timeline-year">2007</div>
 				<div class="timeline-content">
 					<h3>Online Presence</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
 			</div>
 			<div class="timeline-item">
 				<div class="timeline-year">Year</div>
 				<div class="timeline-content">
 					<h3>Placeholder</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
 			</div>
 			<div class="timeline-item">
 				<div class="timeline-year">Year</div>
 				<div class="timeline-content">
 					<h3>Placeholder</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
 			</div>
 			<div class="timeline-item">
 				<div class="timeline-year">Year</div>
 				<div class="timeline-content">
 					<h3>Placeholder</h3>
-					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
 			</div>
 			<div class="timeline-item">
 				<div class="timeline-year">Year</div>
 				<div class="timeline-content">
 					<h3>Placeholder</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- CTA PANELS -->
+	<!-- CTA -->
 	<div class="about-cta reveal">
 		<div class="cta-panel">
 			<p class="cta-panel-tag">— Explore</p>
@@ -821,7 +879,6 @@
 			<p class="cta-panel-desc">Browse all 44 artists in the collective.</p>
 			<a href="artists.html" class="btn-primary">View All Artists →</a>
 		</div>
-		
 	</div>
 
 	<footer>
@@ -829,7 +886,7 @@
 		<ul class="footer-links">
 			<li><a href="artists.html">Artists</a></li>
 			<li><a href="gallery.html">Gallery</a></li>
-			<li><a href="index.html">About</a></li>
+			<li><a href="about.html">About</a></li>
 			<li><a href="https://instagram.com" target="_blank">Instagram ↗</a></li>
 		</ul>
 		<p class="footer-copy">© 2026 VIBRATIONS Collective. All rights reserved.</p>
@@ -851,6 +908,14 @@
 			entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 		}, { threshold: 0.05 });
 		reveals.forEach(el => observer.observe(el));
+
+		const menuToggle = document.getElementById('menuToggle');
+		const mobileMenu = document.getElementById('mobileMenu');
+		const menuClose = document.getElementById('menuClose');
+		menuToggle.addEventListener('click', () => { mobileMenu.classList.add('open'); document.body.style.overflow = 'hidden'; });
+		menuClose.addEventListener('click', closeMobileMenu);
+		function closeMobileMenu() { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
 	</script>
 </body>
 </html>
+
