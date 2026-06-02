@@ -1,28 +1,289 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Graph 130 - Danielle </title>
-		<style>
-			p {
-				color:blueviolet;
-				font-size: 22px;
-			}
-		</style>
-	</head>
-	<body>
-		<h1>Danielle Dale </h1>
-		<h2>Evcc - Graph 130 - Spring 2025.</h2>
-		<h3>How many quarters have you attended EvCC?</h3>
-		<p> I have Attended 6 quarters including this one</p>
-		<h3>What degree/certificate program are you pursuing</h3>
-		<p> I am Planning on gettin my masters in Graphic and web design </p>	
-		<h3>Why did you choose this degree/certificate?</h3>
-		<p>I love animation and drawing and this program is really going to help me for what I plan on doing.</p>	
-		<h3>What artist/designer inspires you? Why?</h3>
-		<p>An animation youtuber called Theodd1sout. I like him because he turns his stories into animations and I want to do that one day.</p>	
-		<h3>What is your favorite color?  (Please, use a hex code and style your answer with that color.).</h3>
-		<p style="color: pink;"> pink.</p>
-<!-- this is a comment tag. this will not appear in the browser screen. feel free to delete this if you want. Replace the content in the headers and paragraph tags with your own content from the introduction assignment -->
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>VIBRATIONS — Artist Collective</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/homepage.css" />
+	
+</head>
+<body>
+
+	<div class="cursor" id="cursor"></div>
+
+	<div class="scroll-indicator">
+		<div class="scroll-dot active" data-section="hero"></div>
+		<div class="scroll-dot" data-section="disciplines"></div>
+		<div class="scroll-dot" data-section="gallery"></div>
+	</div>
+
+	<!-- Mobile Menu -->
+	<div class="mobile-menu" id="mobileMenu">
+		<button class="mobile-menu-close" id="menuClose">✕</button>
+		<a href="artists.html" onclick="closeMobileMenu()">Artists</a>
+		<a href="gallery.html" onclick="closeMobileMenu()">Gallery</a>
+		<a href="about.html" onclick="closeMobileMenu()">About</a>
+	</div>
+
+	<nav>
+		<a href="vibrations.html" class="nav-logo">VIBRATIONS</a>
+		<ul class="nav-links">
+			<li><a href="artists.html">Artists</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="about.html">About</a></li>
+		</ul>
+		<button class="nav-toggle" id="menuToggle" aria-label="Open menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</nav>
+
+	<!-- HERO -->
+	<section id="hero">
+		<div class="hero-left">
+			<p class="hero-tag">— The Artist Collective</p>
+			<h1 class="hero-title">
+				<span>WHERE</span>
+				<span>ART</span>
+				<span>LIVES</span>
+			</h1>
+			<p class="hero-subtitle">
+				A curated collective of 44 independent artists pushing the boundaries of illustration, photography, design, type, and beyond. We amplify bold voices and unconventional visions.
+			</p>
+			<div class="hero-cta">
+				<a href="artists.html" class="btn-primary">Meet the Artists →</a>
+			</div>
+		</div>
+
+		<div class="hero-right">
+			<div class="hero-color-blocks">
+				<div class="color-block"></div>
+				<div class="color-block"></div>
+				<div class="color-block"></div>
+			</div>
+			<div class="hero-right-text">
+				<div class="hero-counter">44</div>
+				<div class="hero-counter-label">Artists Featured</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- MARQUEE -->
+	<div class="marquee-strip">
+		<div class="marquee-inner">
+			<span>Fine Art</span><span class="dot">◆</span>
+			<span>Photography</span><span class="dot">◆</span>
+			<span>Typography</span><span class="dot">◆</span>
+			<span>Painting</span><span class="dot">◆</span>
+			<span>Ceramics</span><span class="dot">◆</span>
+			<span>Digital Art</span><span class="dot">◆</span>
+			<span>Graphic Design</span><span class="dot">◆</span>
+			<span>Writing</span><span class="dot">◆</span>
+			<span>Fine Art</span><span class="dot">◆</span>
+			<span>Photography</span><span class="dot">◆</span>
+			<span>Typography</span><span class="dot">◆</span>
+			<span>Painting</span><span class="dot">◆</span>
+			<span>Ceramics</span><span class="dot">◆</span>
+			<span>Digital Art</span><span class="dot">◆</span>
+			<span>Graphic Design</span><span class="dot">◆</span>
+			<span>Writing</span><span class="dot">◆</span>
+		</div>
+	</div>
+
+	<!-- DISCIPLINES -->
+	<section id="disciplines">
+		<div class="disciplines-header reveal">
+			<p class="section-label">What We Showcase</p>
+			<h2 class="gallery-title">DISCIPLINES</h2>
+		</div>
+
+		<div class="disciplines-grid reveal">
+			<div class="discipline-card">
+				<h3 class="discipline-name">Fine Art</h3>
+				<p class="discipline-count">14 Artists</p>
+				<p class="discipline-desc">Fine art, in Vibrations, is the art of creating illustrations and paintings that push the boundaries of traditional mediums. Our Fine Arts students explore their creativity at EVCC and create unique pieces that you won't find in everyday life.</p>
+			</div>
+			<div class="discipline-card">
+				<h3 class="discipline-name">Photography</h3>
+				<p class="discipline-count">14 Artists</p>
+				<p class="discipline-desc">The art and science of capturing light to create an image, whether through a digital sensor or chemical film. Our Photography Students showcase the power and beauty behind each picture taken, showing many forms of perspective.</p>
+			</div>
+			<div class="discipline-card">
+				<h3 class="discipline-name">Ceramics</h3>
+				<p class="discipline-count">7 Artists</p>
+				<p class="discipline-desc">The art of creating objects from clay, which are then fired at high temperatures to create durable and beautiful pieces. Our Ceramics Students explore the tactile nature of clay and the transformative power of the firing process.</p>
+			</div>
+			<div class="discipline-card">
+				<h3 class="discipline-name">Graphic Design</h3>
+				<p class="discipline-count">9 Artists</p>
+				<p class="discipline-desc">The art of creating visual content to communicate messages effectively. Our Graphic Design Students explore the intersection of aesthetics and functionality in their work.</p>
+			</div>
+			<div class="discipline-card">
+				<h3 class="discipline-name">Writing</h3>
+				<p class="discipline-count">5 Artists</p>
+				<p class="discipline-desc">The art of creating written content to communicate messages effectively. Our Writing Students explore the power of language and storytelling in their work.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- GALLERY -->
+	<section id="gallery">
+		<div class="gallery-header reveal">
+			<div>
+				<p class="section-label">Curated Works</p>
+				<h2 class="gallery-title">THE GALLERY</h2>
+			</div>
+			<a href="gallery.html" class="btn-outline">View All Works →</a>
+		</div>
+
+		<div class="gallery-grid reveal">
+			<div class="gallery-item wide" onclick="window.location='gallery/index.html'">
+				<div class="gallery-item-bg g1">◈</div>
+				<div class="gallery-item-info">
+					<div class="gallery-item-title">Crimson Frequency</div>
+					<div class="gallery-item-artist">Mara Soleil</div>
+				</div>
+			</div>
+			<div class="gallery-item tall" onclick="window.location='gallery/index.html'">
+				<div class="gallery-item-bg g3">◉</div>
+				<div class="gallery-item-info">
+					<div class="gallery-item-title">Violet Static</div>
+					<div class="gallery-item-artist">Jin Raku</div>
+				</div>
+			</div>
+			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+				<div class="gallery-item-bg g2">✦</div>
+				<div class="gallery-item-info">
+					<div class="gallery-item-title">Blue Meridian</div>
+					<div class="gallery-item-artist">Sofía Vane</div>
+				</div>
+			</div>
+			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+				<div class="gallery-item-bg g6">◬</div>
+				<div class="gallery-item-info">
+					<div class="gallery-item-title">Acid Garden</div>
+					<div class="gallery-item-artist">Kael Drift</div>
+				</div>
+			</div>
+			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+				<div class="gallery-item-bg g5">⬡</div>
+				<div class="gallery-item-info">
+					<div class="gallery-item-title">Ember Wave</div>
+					<div class="gallery-item-artist">Mara Soleil</div>
+				</div>
+			</div>
+			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+				<div class="gallery-item-bg g7">◎</div>
+				<div class="gallery-item-info">
+					<div class="gallery-item-title">Rose Cipher</div>
+					<div class="gallery-item-artist">Jin Raku</div>
+				</div>
+			</div>
+			<div class="gallery-item wide" onclick="window.location='gallery/index.html'">
+				<div class="gallery-item-bg g4">⟁</div>
+				<div class="gallery-item-info">
+					<div class="gallery-item-title">Mint Threshold</div>
+					<div class="gallery-item-artist">Sofía Vane</div>
+				</div>
+			</div>
+			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+				<div class="gallery-item-bg g9">❋</div>
+				<div class="gallery-item-info">
+					<div class="gallery-item-title">Deep Signal</div>
+					<div class="gallery-item-artist">Kael Drift</div>
+				</div>
+			</div>
+			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+				<div class="gallery-item-bg g10">◈</div>
+				<div class="gallery-item-info">
+					<div class="gallery-item-title">Cerulean Myth</div>
+					<div class="gallery-item-artist">Mara Soleil</div>
+				</div>
+			</div>
+			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+				<div class="gallery-item-bg g11">✧</div>
+				<div class="gallery-item-info">
+					<div class="gallery-item-title">Fire Archive</div>
+					<div class="gallery-item-artist">Jin Raku</div>
+				</div>
+			</div>
+			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+				<div class="gallery-item-bg g8">◉</div>
+				<div class="gallery-item-info">
+					<div class="gallery-item-title">Teal Memory</div>
+					<div class="gallery-item-artist">Sofía Vane</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer>
+		<div class="footer-logo">VIBRATIONS</div>
+		<ul class="footer-links">
+			<li><a href="artists.html">Artists</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="https://instagram.com" target="_blank">Instagram ↗</a></li>
+		</ul>
+		<p class="footer-copy">© 2026 Vibrations Collective. All rights reserved.</p>
+	</footer>
+
+	<script>
+		const cursor = document.getElementById('cursor');
+		document.addEventListener('mousemove', e => {
+			cursor.style.left = e.clientX + 'px';
+			cursor.style.top = e.clientY + 'px';
+		});
+		document.querySelectorAll('a, button, .gallery-item, .discipline-card').forEach(el => {
+			el.addEventListener('mouseenter', () => cursor.classList.add('expanded'));
+			el.addEventListener('mouseleave', () => cursor.classList.remove('expanded'));
+		});
+
+		const reveals = document.querySelectorAll('.reveal');
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(e => {
+				if (e.isIntersecting) e.target.classList.add('visible');
+			});
+		}, { threshold: 0.1 });
+		reveals.forEach(el => observer.observe(el));
+
+		const sections = ['hero', 'disciplines', 'gallery'];
+		const dots = document.querySelectorAll('.scroll-dot');
+		const sectionEls = sections.map(id => document.getElementById(id)).filter(Boolean);
+
+		window.addEventListener('scroll', () => {
+			const scrollY = window.scrollY + window.innerHeight / 2;
+			let active = 0;
+			sectionEls.forEach((el, i) => {
+				if (el && el.offsetTop <= scrollY) active = i;
+			});
+			dots.forEach((d, i) => d.classList.toggle('active', i === active));
+		});
+
+		// Mobile menu
+		const menuToggle = document.getElementById('menuToggle');
+		const mobileMenu = document.getElementById('mobileMenu');
+		const menuClose = document.getElementById('menuClose');
+
+		menuToggle.addEventListener('click', () => {
+			mobileMenu.classList.add('open');
+			document.body.style.overflow = 'hidden';
+		});
+
+		menuClose.addEventListener('click', closeMobileMenu);
+
+		function closeMobileMenu() {
+			mobileMenu.classList.remove('open');
+			document.body.style.overflow = '';
+		}
+	</script>
+
+</body>
 </html>
