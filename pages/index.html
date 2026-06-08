@@ -6,11 +6,9 @@
 	<title>VIBRATIONS — Artist Collective</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../styles/homepage.css" />
-	
 </head>
 <body>
 
@@ -143,77 +141,77 @@
 		</div>
 
 		<div class="gallery-grid reveal">
-			<div class="gallery-item wide" onclick="window.location='gallery/index.html'">
+			<div class="gallery-item wide" onclick="openLightbox('g1','◈','Crimson Frequency','Mara Soleil')">
 				<div class="gallery-item-bg g1">◈</div>
 				<div class="gallery-item-info">
 					<div class="gallery-item-title">Crimson Frequency</div>
 					<div class="gallery-item-artist">Mara Soleil</div>
 				</div>
 			</div>
-			<div class="gallery-item tall" onclick="window.location='gallery/index.html'">
+			<div class="gallery-item tall" onclick="openLightbox('g3','◉','Violet Static','Jin Raku')">
 				<div class="gallery-item-bg g3">◉</div>
 				<div class="gallery-item-info">
 					<div class="gallery-item-title">Violet Static</div>
 					<div class="gallery-item-artist">Jin Raku</div>
 				</div>
 			</div>
-			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+			<div class="gallery-item" onclick="openLightbox('g2','✦','Blue Meridian','Sofía Vane')">
 				<div class="gallery-item-bg g2">✦</div>
 				<div class="gallery-item-info">
 					<div class="gallery-item-title">Blue Meridian</div>
 					<div class="gallery-item-artist">Sofía Vane</div>
 				</div>
 			</div>
-			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+			<div class="gallery-item" onclick="openLightbox('g6','◬','Acid Garden','Kael Drift')">
 				<div class="gallery-item-bg g6">◬</div>
 				<div class="gallery-item-info">
 					<div class="gallery-item-title">Acid Garden</div>
 					<div class="gallery-item-artist">Kael Drift</div>
 				</div>
 			</div>
-			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+			<div class="gallery-item" onclick="openLightbox('g5','⬡','Ember Wave','Mara Soleil')">
 				<div class="gallery-item-bg g5">⬡</div>
 				<div class="gallery-item-info">
 					<div class="gallery-item-title">Ember Wave</div>
 					<div class="gallery-item-artist">Mara Soleil</div>
 				</div>
 			</div>
-			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+			<div class="gallery-item" onclick="openLightbox('g7','◎','Rose Cipher','Jin Raku')">
 				<div class="gallery-item-bg g7">◎</div>
 				<div class="gallery-item-info">
 					<div class="gallery-item-title">Rose Cipher</div>
 					<div class="gallery-item-artist">Jin Raku</div>
 				</div>
 			</div>
-			<div class="gallery-item wide" onclick="window.location='gallery/index.html'">
+			<div class="gallery-item wide" onclick="openLightbox('g4','⟁','Mint Threshold','Sofía Vane')">
 				<div class="gallery-item-bg g4">⟁</div>
 				<div class="gallery-item-info">
 					<div class="gallery-item-title">Mint Threshold</div>
 					<div class="gallery-item-artist">Sofía Vane</div>
 				</div>
 			</div>
-			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+			<div class="gallery-item" onclick="openLightbox('g9','❋','Deep Signal','Kael Drift')">
 				<div class="gallery-item-bg g9">❋</div>
 				<div class="gallery-item-info">
 					<div class="gallery-item-title">Deep Signal</div>
 					<div class="gallery-item-artist">Kael Drift</div>
 				</div>
 			</div>
-			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+			<div class="gallery-item" onclick="openLightbox('g10','◈','Cerulean Myth','Mara Soleil')">
 				<div class="gallery-item-bg g10">◈</div>
 				<div class="gallery-item-info">
 					<div class="gallery-item-title">Cerulean Myth</div>
 					<div class="gallery-item-artist">Mara Soleil</div>
 				</div>
 			</div>
-			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+			<div class="gallery-item" onclick="openLightbox('g11','✧','Fire Archive','Jin Raku')">
 				<div class="gallery-item-bg g11">✧</div>
 				<div class="gallery-item-info">
 					<div class="gallery-item-title">Fire Archive</div>
 					<div class="gallery-item-artist">Jin Raku</div>
 				</div>
 			</div>
-			<div class="gallery-item" onclick="window.location='gallery/index.html'">
+			<div class="gallery-item" onclick="openLightbox('g8','◉','Teal Memory','Sofía Vane')">
 				<div class="gallery-item-bg g8">◉</div>
 				<div class="gallery-item-info">
 					<div class="gallery-item-title">Teal Memory</div>
@@ -222,6 +220,18 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- LIGHTBOX -->
+	<div id="lightbox" onclick="closeLightbox()">
+		<div class="lightbox-inner" onclick="event.stopPropagation()">
+			<div id="lightbox-bg"></div>
+			<div class="lightbox-info">
+				<div class="lightbox-title" id="lightbox-title"></div>
+				<div class="lightbox-artist" id="lightbox-artist"></div>
+			</div>
+			<button class="lightbox-close" onclick="closeLightbox()">✕</button>
+		</div>
+	</div>
 
 	<!-- FOOTER -->
 	<footer>
@@ -236,6 +246,7 @@
 	</footer>
 
 	<script>
+		// ── Cursor ──
 		const cursor = document.getElementById('cursor');
 		document.addEventListener('mousemove', e => {
 			cursor.style.left = e.clientX + 'px';
@@ -246,14 +257,13 @@
 			el.addEventListener('mouseleave', () => cursor.classList.remove('expanded'));
 		});
 
-		const reveals = document.querySelectorAll('.reveal');
+		// ── Reveal on scroll ──
 		const observer = new IntersectionObserver(entries => {
-			entries.forEach(e => {
-				if (e.isIntersecting) e.target.classList.add('visible');
-			});
+			entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 		}, { threshold: 0.1 });
-		reveals.forEach(el => observer.observe(el));
+		document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+		// ── Scroll dots ──
 		const sections = ['hero', 'disciplines', 'gallery'];
 		const dots = document.querySelectorAll('.scroll-dot');
 		const sectionEls = sections.map(id => document.getElementById(id)).filter(Boolean);
@@ -261,28 +271,39 @@
 		window.addEventListener('scroll', () => {
 			const scrollY = window.scrollY + window.innerHeight / 2;
 			let active = 0;
-			sectionEls.forEach((el, i) => {
-				if (el && el.offsetTop <= scrollY) active = i;
-			});
+			sectionEls.forEach((el, i) => { if (el && el.offsetTop <= scrollY) active = i; });
 			dots.forEach((d, i) => d.classList.toggle('active', i === active));
 		});
 
-		// Mobile menu
-		const menuToggle = document.getElementById('menuToggle');
-		const mobileMenu = document.getElementById('mobileMenu');
-		const menuClose = document.getElementById('menuClose');
-
-		menuToggle.addEventListener('click', () => {
-			mobileMenu.classList.add('open');
+		// ── Mobile menu ──
+		document.getElementById('menuToggle').addEventListener('click', () => {
+			document.getElementById('mobileMenu').classList.add('open');
 			document.body.style.overflow = 'hidden';
 		});
-
-		menuClose.addEventListener('click', closeMobileMenu);
+		document.getElementById('menuClose').addEventListener('click', closeMobileMenu);
 
 		function closeMobileMenu() {
-			mobileMenu.classList.remove('open');
+			document.getElementById('mobileMenu').classList.remove('open');
 			document.body.style.overflow = '';
 		}
+
+		// ── Lightbox ──
+		function openLightbox(bgClass, symbol, title, artist) {
+			const bg = document.getElementById('lightbox-bg');
+			bg.className = 'gallery-item-bg ' + bgClass;
+			bg.textContent = symbol;
+			document.getElementById('lightbox-title').textContent = title;
+			document.getElementById('lightbox-artist').textContent = artist;
+			document.getElementById('lightbox').classList.add('open');
+			document.body.style.overflow = 'hidden';
+		}
+
+		function closeLightbox() {
+			document.getElementById('lightbox').classList.remove('open');
+			document.body.style.overflow = '';
+		}
+
+		document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 	</script>
 
 </body>
