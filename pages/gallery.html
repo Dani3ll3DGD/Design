@@ -1760,6 +1760,24 @@
 		menuToggle.addEventListener('click', () => { mobileMenu.classList.add('open'); document.body.style.overflow = 'hidden'; });
 		menuClose.addEventListener('click', closeMobileMenu);
 		function closeMobileMenu() { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
+
+		
+window.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const filter = params.get("filter");
+
+    if (filter) {
+        // find the matching button in the filter bar
+        const btn = document.querySelector(
+            `.filter-bar button[onclick*="'${filter}'"]`
+        );
+
+        if (btn) {
+            btn.click(); // triggers your existing filterGallery function
+        }
+    }
+});
+
 	</script>
 </body>
 </html>

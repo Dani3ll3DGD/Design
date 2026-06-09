@@ -177,7 +177,7 @@
 		/* ARTISTS GRID */
 		.artists-grid {
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(5, 1fr);
 			gap: 1px;
 			background: rgba(245,240,232,0.08);
 		}
@@ -192,7 +192,7 @@
 		.artist-card:hover { background: rgba(245,240,232,0.03); }
 
 		.artist-card-visual {
-			aspect-ratio: 4/3;
+			aspect-ratio: 16/9;
 			position: relative;
 			overflow: hidden;
 			display: flex;
@@ -271,8 +271,8 @@
 		/* FOOTER */
 		footer {
 			border-top: 1px solid rgba(245,240,232,0.1);
-			padding: 3rem;
-			display: flex; justify-content: space-between; align-items: center;
+			padding: 3rem; display: flex;
+			justify-content: space-between; align-items: center;
 			flex-wrap: wrap; gap: 1.5rem;
 		}
 		.footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.1em; }
@@ -283,7 +283,6 @@
 		}
 		.footer-links a:hover { opacity: 1; }
 		.footer-copy { font-size: 0.65rem; opacity: 0.3; letter-spacing: 0.05em; }
-
 		@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 		@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 

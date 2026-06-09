@@ -9,6 +9,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../styles/artists.css" />
 	
+	
 </head>
 <body>
 
@@ -40,14 +41,14 @@
 			<h1 class="page-title">OUR<br><em class="neg"> ARTISTS</em></h1>
 		</div>
 		<div class="page-header-right">
-			<p class="page-desc">44 independent artists, each pushing their discipline into uncharted territory. Browse by medium or scroll to discover the full collective.</p>
+			<p class="page-desc">43 independent artists, each pushing their discipline into uncharted territory. Browse by medium or scroll to discover the full collective.</p>
 		</div>
 	</header>
 
 	<!-- FILTER BAR -->
 	<div class="filter-bar">
 		<span class="filter-label">Filter by:</span>
-		<button class="filter-btn active" onclick="filterArtists('all', this)">All (44)</button>
+		<button class="filter-btn active" onclick="filterArtists('all', this)">All (43)</button>
 		<button class="filter-btn" onclick="filterArtists('fine art', this)">Fine Art</button>
 		<button class="filter-btn" onclick="filterArtists('photography', this)">Photography</button>
 		<button class="filter-btn" onclick="filterArtists('graphic', this)">Graphic Design</button>
@@ -58,11 +59,11 @@
 	<!-- MARQUEE -->
 	<div class="marquee-strip">
 		<div class="marquee-inner">
-			<span>44 Artists</span><span class="dot">◆</span>
+			<span>43 Artists</span><span class="dot">◆</span>
 			<span>5 Disciplines</span><span class="dot">◆</span>
 			<span>Bold Voices</span><span class="dot">◆</span>
 			<span>Unconventional Visions</span><span class="dot">◆</span>
-			<span>44 Artists</span><span class="dot">◆</span>
+			<span>43 Artists</span><span class="dot">◆</span>
 			<span>5 Disciplines</span><span class="dot">◆</span>
 			<span>Bold Voices</span><span class="dot">◆</span>
 			<span>Unconventional Visions</span><span class="dot">◆</span>
@@ -76,7 +77,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Writing</p>
 				<h2 class="artist-card-name">Avery Anderson</h2>
-				<div class="artist-card-tags"><span class="tag">Writing</span><span class="tag">Non-Fiction</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=writing'">
+   				 Writing
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art & photography">
@@ -84,7 +88,15 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art & Photography</p>
 				<h2 class="artist-card-name">Roland D. Anderson</h2>
-				<div class="artist-card-tags"><span class="tag">Fine Art</span><span class="tag">Photography</span></div>
+					<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=fine-art'">
+   				 fine Art 
+				</button>
+					<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=photography'">
+   				 Photography
+				</button>
+
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art">
@@ -92,7 +104,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art</p>
 				<h2 class="artist-card-name">Jamie-lynn Arias</h2>
-				<div class="artist-card-tags"><span class="tag">Fine Art</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=fine-art'">
+   				 Fine Art
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art">
@@ -100,7 +115,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art</p>
 				<h2 class="artist-card-name">Laura Atehortua Martinez</h2>
-				<div class="artist-card-tags"><span class="tag">Fine Art</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=fine-art'">
+   				 Fine Art
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art">
@@ -108,7 +126,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art</p>
 				<h2 class="artist-card-name">Arrow Austin</h2>
-				<div class="artist-card-tags"><span class="tag">Fine Art</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=fine-art'">
+   				 Fine Art
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art">
@@ -116,7 +137,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art</p>
 				<h2 class="artist-card-name">Madison Baker</h2>
-				<div class="artist-card-tags"><span class="tag">Painting</span><span class="tag">Illustration</span><span class="tag">Abstract</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=fine-art'">
+   				 Fine Art
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="photography">
@@ -124,7 +148,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Photography</p>
 				<h2 class="artist-card-name">Caitlin Bates</h2>
-				<div class="artist-card-tags"><span class="tag">Photography</span><span class="tag">Nature</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=photography'">
+   				 Photography
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="graphic design">
@@ -132,7 +159,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Graphic Design</p>
 				<h2 class="artist-card-name">Paulina Guzman Benavides</h2>
-				<div class="artist-card-tags"><span class="tag">Graphic Design</span><span class="tag">Illustration</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=graphic-design'">
+   				 Graphic Dersign
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="photography">
@@ -140,7 +170,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Photography</p>
 				<h2 class="artist-card-name">Shelby Campbell</h2>
-				<div class="artist-card-tags"><span class="tag">Photography</span><span class="tag">Nature</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=photography'">
+   				 Photography
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art & photography">
@@ -148,7 +181,14 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art & Photography</p>
 				<h2 class="artist-card-name">Celes Caperoon</h2>
-				<div class="artist-card-tags"><span class="tag">Painting</span><span class="tag">Photography</span><span class="tag">Fine Art</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=photography'">
+   				 Photography
+				</button>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=fine-art'">
+   				 Fine Art
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art & photography">
@@ -156,7 +196,14 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art & Photography</p>
 				<h2 class="artist-card-name">Ness Ceba</h2>
-				<div class="artist-card-tags"><span class="tag">Illustration</span><span class="tag">Photography</span><span class="tag">Fine Art</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=photography'">
+   				 Photography
+				</button>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=fine-art'">
+   				 Fine Art
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="graphic design">
@@ -164,7 +211,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Graphic Design</p>
 				<h2 class="artist-card-name">Danielle G. Dale</h2>
-				<div class="artist-card-tags"><span class="tag">Typography</span><span class="tag">Graphic Design</span><span class="tag">Direction</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=graphic-design'">
+   				 Graphic Design
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art">
@@ -172,7 +222,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art</p>
 				<h2 class="artist-card-name">Anabel M. Elliott</h2>
-				<div class="artist-card-tags"><span class="tag">Painting</span><span class="tag">Fine Art</span><span class="tag">Oil</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=fine-art'">
+   				 Fine Art
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="photography">
@@ -180,7 +233,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Photography</p>
 				<h2 class="artist-card-name">Emily Gochnauer</h2>
-				<div class="artist-card-tags"><span class="tag">Photography</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=photography'">
+   				 Photography
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="ceramics">
@@ -188,7 +244,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Ceramics</p>
 				<h2 class="artist-card-name">Payton Goebel</h2>
-				<div class="artist-card-tags"><span class="tag">Ceramics</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=ceramics'">
+   				 Ceramics
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="ceramics">
@@ -196,7 +255,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Ceramics</p>
 				<h2 class="artist-card-name">Reyyan Gulbagi</h2>
-				<div class="artist-card-tags"><span class="tag">Ceramics</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=ceramics'">
+   				 Ceramics
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="ceramics">
@@ -204,7 +266,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Ceramics</p>
 				<h2 class="artist-card-name">Nimue Hartka-Kelm</h2>
-				<div class="artist-card-tags"><span class="tag">Ceramics</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=ceramics'">
+   				 Ceramics
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art & graphic design">
@@ -212,7 +277,15 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art & Graphic Design</p>
 				<h2 class="artist-card-name">Anna Hoang</h2>
-				<div class="artist-card-tags"><span class="tag">Fine Art</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=fine-art'">
+   				 Fine Art 
+				</button>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=graphic-design'">
+   				 Graphic Design 
+				</button>
+
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art">
@@ -220,7 +293,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art</p>
 				<h2 class="artist-card-name">Brooke Howard</h2>
-				<div class="artist-card-tags"><span class="tag">Fine Art</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=fine-art'">
+   				 Fine Art 
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="writing">
@@ -228,7 +304,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Writing</p>
 				<h2 class="artist-card-name">Nick Jeglum</h2>
-				<div class="artist-card-tags"><span class="tag">Writing</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=writing'">
+   				 Writing
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="ceramics">
@@ -236,7 +315,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Ceramics</p>
 				<h2 class="artist-card-name">Britanny Jean</h2>
-				<div class="artist-card-tags"><span class="tag">Ceramics</span></div>
+					<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=ceramics'">
+   				 Ceramics
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="graphic design">
@@ -244,7 +326,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Graphic Design</p>
 				<h2 class="artist-card-name">Kaylee Kerr</h2>
-				<div class="artist-card-tags"><span class="tag">Graphic Design</span></div>
+					<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=graphic-design'">
+   				 Graphic Design
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art & graphic design">
@@ -252,7 +337,14 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art & Graphic Design</p>
 				<h2 class="artist-card-name">Madeline Knight</h2>
-				<div class="artist-card-tags"><span class="tag">Fine Art</span><span class="tag">Graphic Design</span><span class="tag">Typography</span></div>
+					<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=fine-art'">
+   				 Fine Art
+				</button>
+					<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=graphic-design'">
+   				 graphic-design
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art">
@@ -260,7 +352,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art</p>
 				<h2 class="artist-card-name">Zero Kosciuk</h2>
-				<div class="artist-card-tags"><span class="tag">Fine Art</span><span class="tag">Illustration</span></div>
+					<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=fine-art'">
+   				 fine art
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="photography">
@@ -268,7 +363,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Photography</p>
 				<h2 class="artist-card-name">Christine Kruse</h2>
-				<div class="artist-card-tags"><span class="tag">Photography</span></div>
+					<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=photography'">
+   				 Photography
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art">
@@ -276,7 +374,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art</p>
 				<h2 class="artist-card-name">Jovelle Lee</h2>
-				<div class="artist-card-tags"><span class="tag">Fine Art</span></div>
+					<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=fine-art'">
+   				 Fine Art
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="writing">
@@ -284,7 +385,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Writing</p>
 				<h2 class="artist-card-name">Anthony "Chovy" Leone</h2>
-				<div class="artist-card-tags"><span class="tag">Writing</span></div>
+					<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=writing'">
+   				 Writing
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="graphic design & photography">
@@ -292,7 +396,14 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Photography & Graphic Design</p>
 				<h2 class="artist-card-name">Max Maychuk-Volchkova</h2>
-				<div class="artist-card-tags"><span class="tag">Photography</span></div>
+					<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=graphic-design'">
+   				 Graphic Design
+				</button>
+					<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=photography'">
+   				 photography
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="photography">
@@ -300,7 +411,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Photography</p>
 				<h2 class="artist-card-name">Sìlis McAllister</h2>
-				<div class="artist-card-tags"><span class="tag">Photography</span></div>
+					<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=photography'">
+   				 photography
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="photography">
@@ -308,7 +422,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Photography</p>
 				<h2 class="artist-card-name">Jasmine Merkel</h2>
-				<div class="artist-card-tags"><span class="tag">Photography</span></div>
+					<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=photography'">
+   				 photography
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="graphic design">
@@ -316,7 +433,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Graphic Design</p>
 				<h2 class="artist-card-name">Bianca Moreno</h2>
-				<div class="artist-card-tags"><span class="tag">Graphic Design</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=graphic-design'">
+   				 graphic-design 
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="ceramics">
@@ -324,7 +444,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Ceramics</p>
 				<h2 class="artist-card-name">David Newman</h2>
-				<div class="artist-card-tags"><span class="tag">Ceramics</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=ceramics'">
+   				 ceramics
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="graphic design">
@@ -332,7 +455,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Graphic Design</p>
 				<h2 class="artist-card-name">Joseph Rissi</h2>
-				<div class="artist-card-tags"><span class="tag">Graphic Design</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=graphic-design'">
+   				 graphic-design
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="photography">
@@ -340,7 +466,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Photography</p>
 				<h2 class="artist-card-name">Brooklyn Robison</h2>
-				<div class="artist-card-tags"><span class="tag">Photography</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=photography'">
+   				 photography
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="photography">
@@ -348,7 +477,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Photography</p>
 				<h2 class="artist-card-name">Victoria Roos</h2>
-				<div class="artist-card-tags"><span class="tag">Photography</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=photography'">
+   				 photography
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art & photography">
@@ -356,7 +488,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art & Photography</p>
 				<h2 class="artist-card-name">Samantha Rutledge</h2>
-				<div class="artist-card-tags"><span class="tag">Photography</span><span class="tag">Fine Art</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=photography'">
+   				 photography
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="writing">
@@ -364,7 +499,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Writing</p>
 				<h2 class="artist-card-name">Elizabeth Salines</h2>
-				<div class="artist-card-tags"><span class="tag">Writing</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=writing'">
+   				 writing
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art">
@@ -372,7 +510,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art</p>
 				<h2 class="artist-card-name">Suhayl Santiago</h2>
-				<div class="artist-card-tags"><span class="tag">Fine Art</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=fine-art'">
+   				 fine-art
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="photography">
@@ -380,7 +521,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Photography</p>
 				<h2 class="artist-card-name">Sovanrom Sot</h2>
-				<div class="artist-card-tags"><span class="tag">Photography</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=photography'">
+   				 photography
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="fine art">
@@ -388,7 +532,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Fine Art</p>
 				<h2 class="artist-card-name">Tadhg Stanley</h2>
-				<div class="artist-card-tags"><span class="tag">Fine Art</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=fine-art'">
+   				 fine-art
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="writing">
@@ -396,7 +543,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Writing</p>
 				<h2 class="artist-card-name">Tyler Thomas</h2>
-				<div class="artist-card-tags"><span class="tag">Writing</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=writing'">
+   				 writing
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="ceramics">
@@ -404,7 +554,10 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Ceramics</p>
 				<h2 class="artist-card-name">Michele Vaughn</h2>
-				<div class="artist-card-tags"><span class="tag">Ceramics</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=ceramics'">
+   				 ceramics
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="ceramics">
@@ -412,17 +565,13 @@
 			<div class="artist-card-body">
 				<p class="artist-card-discipline">Ceramics</p>
 				<h2 class="artist-card-name">Amelie Yamka</h2>
-				<div class="artist-card-tags"><span class="tag">Ceramics</span></div>
+				<button class="filter-btn"
+   				 onclick="window.location.href='gallery.html?filter=ceramics'">
+   				 ceramics
+				</button>
 			</div>
 		</div>
 		<div class="artist-card reveal" data-discipline="graphic design">
-			<div class="artist-card-visual c-multi">G<div class="artist-card-num">44</div></div>
-			<div class="artist-card-body">
-				<p class="artist-card-discipline">Graphic Design</p>
-				<h2 class="artist-card-name">Graph 118 — Winter 2026</h2>
-				<div class="artist-card-tags"><span class="tag">Graphic Design</span></div>
-			</div>
-		</div>
 	</div>
 
 	<footer>

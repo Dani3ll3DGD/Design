@@ -245,7 +245,7 @@
 
 		.piece-title {
 			font-family: 'DM Serif Display', serif;
-			font-size: clamp(1rem, 2vw, 1.4rem);
+			font-size: clamp(1rem, 2vw, 1.6rem);
 			margin-bottom: 0.3rem; line-height: 1.2;
 		}
 
@@ -270,7 +270,9 @@
 		.lightbox-inner {
 			display: grid;
 			grid-template-columns: 1fr 340px;
-			gap: 3rem; max-width: 1000px; width: 100%;
+			gap: 3rem;
+			 /* max-width: 1000px; */
+			 width: 100%;
 		}
 
 		.lightbox-visual {
