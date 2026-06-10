@@ -3,7 +3,7 @@
     margin: auto;
 }
 p {
-    margin: 10px 0px;
+    margin: 20px 0px;
     line-height: 1.5em;
 }
 .br-large {
@@ -15,7 +15,7 @@ h2 {
 
 .small {
     font-size: .7em;
-    line-height: 0;
+    line-height: 10px;
     margin: 0px;
     display: block;
 }
