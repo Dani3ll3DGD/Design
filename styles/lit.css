@@ -25,6 +25,12 @@ hr {
     display: block;
 }
 
+.wrapped-image {
+    float: right;
+    width: 400px;
+    margin: 0 0 10px 20px;
+}
+
 .page-header .page-title {
     font-size: clamp(3rem, 9vw, 6rem);
     line-height: 0.9;
@@ -34,5 +40,11 @@ hr {
 @media (max-width: 768px) {
     .page-header .page-title {
         font-size: 3.2rem;
+    }
+
+    .wrapped-image {
+        float: none;
+        margin: auto;
+        width: 75%;
     }
 }
