@@ -20,6 +20,10 @@ h2 {
     display: block;
 }
 
+hr {
+    margin-top: 45px;
+    display: block;
+}
 
 .page-header .page-title {
     font-size: clamp(3rem, 9vw, 6rem);
