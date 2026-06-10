@@ -2,13 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vibrations Literature</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="../styles/lit.css" />
+    <link rel="stylesheet" href="../styles/gallery.css" />
+  
 </head>
 <body>
-    <div class="chovy">
+    <div class="mobile-menu" id="mobileMenu">
+		<button class="mobile-menu-close" id="menuClose">✕</button>
+		<a href="artists.html" onclick="closeMobileMenu()">Artists</a>
+		<a href="gallery.html" onclick="closeMobileMenu()">Gallery</a>
+		<a href="about.html" onclick="closeMobileMenu()">About</a>
+	</div>
+
+	<nav>
+		<a href="../index.html" class="nav-logo">VIBRATIONS</a>
+		<ul class="nav-links">
+			<li><a href="artists.html">Artists</a></li>
+			<li><a href="gallery.html" class="active">Gallery</a></li>
+			<li><a href="about.html">About</a></li>
+		</ul>
+		<button class="nav-toggle" id="menuToggle" aria-label="Open menu">
+			<span></span><span></span><span></span>
+		</button>
+	</nav>
+
+	<header class="page-header">
+		<div class="page-header-inner">
+			<div>
+				<p class="page-tag">— Curated Works</p>
+				<h1 class="page-title">THE<br><em>LITERATURE</em></h1>
+			</div>
+			<p class="page-desc">The 6 literature pieces.</p>
+		</div>
+	</header>
+
+    <article class="container">
+    <div id="chovy">
         <!-- class="br-large" is to be styled for double-spaced breaks, add extra padding on top -->
-        <h2>I write</h2>
+<hr>
+        <h2 class="lightbox-title">I write</h2>
 
         <p><i>Anthony "Chovy" Leon</i><p>
 
@@ -120,9 +157,12 @@
         Perhaps I could even help<br>
         Lead you out of your own cave.</p>
     </div>
-    <div class="anderson">
-        <h2>In Memory of Moby</h2>
+    <div id="anderson">
+<hr>
+        <h2 class="lightbox-title">In Memory of Moby</h2>
         <p><i>Avery Anderson</i></p>
+
+
 
         <p>It’s 2014 and my family has just moved into a new house. Shortly after settling in, we add Moby into our family. I was 10 years old. Each year we had a birthday, I thought of them as connected. I turned 11, he turned 1, I turned 12, he turned 2 and so on. This year I turned 20, and he would have been 10.</p>
 
@@ -141,9 +181,10 @@
 
         <p>Although we are leaving behind this house, we are not leaving behind the experiences and memories and stories we have of our sweet Moby.</p>
     </div>
-    <div class="salinas1">
+    <div id="salinas1">
         <!-- class="small" is for styling the tiny text -->
-        <h2>Welcome to My Rabitat</h2>
+<hr>
+        <h2 class="lightbox-title">Welcome to My Rabitat</h2>
         <p><i>Elizabeth Salinas</i></p>
         
         <p>rabitat<br> 
@@ -162,7 +203,7 @@
         shiny, hardwood floors<br> 
         and “my space” just for me</p>
 
-        <p>Where are we?<br> 
+        <p class="special">Where are we?<br> 
         <span class="small">(tha living room)</span></p>
 
         <p>another place in our home<br> 
@@ -172,7 +213,7 @@
         deel<br> 
         it’s a healing place, where mother loves baking banana bread sometimes</p>
         
-        <p>Now where are we? 
+        <p class="special">Now where are we? <br>
         <span class="small">(tha kitchen)</span></p>
         
         <p>the last, but not the least, place i love to roam<br> 
@@ -184,11 +225,12 @@
         cause when in “dowt”: domestic rabbits like yours truly DO NOT belong in cages, hutches or<br> 
         outdoors</p>
         
-        <p>Where are we now?<br>
+        <p class="special">Where are we now?<br>
         <span class="small">(Tha bedroom aka rabitat)</span></p>
     </div>
-    <div class="jelgum">
-        <h2>A Dream</h2>
+    <div id="jelgum">
+<hr>
+        <h2 class="lightbox-title">A Dream</h2>
 
         <p>Art thou the one I dream about at night?<br>
         A secret wish, my unknown paramour,<br>
@@ -208,8 +250,9 @@
         <p>And soon, we’ll dance together in the sun.<br>
         And soon, our safety, love, will have been won.</p>
     </div>
-    <div class="salinas2">
-        <h2>Eva-Rosalind’s main / (Ermando)</h2> 
+    <div id="salinas2">
+<hr>
+        <h2 class="lightbox-title">Eva-Rosalind’s main / (Ermando)</h2> 
         <p><i>Elizabeth Salinas</i></p>
 
         <p>Eva-Rosalind! / (Eva-Rosalind!)<br> 
@@ -290,8 +333,9 @@
         a mixture of human evil, and kind<br> 
         As the portal door leaves with thee, and zaps itself behind</p>
     </div>
-    <div class="thomas">
-        <h2>For Those Next</h2>
+    <div id="thomas">
+<hr>
+        <h2 class="lightbox-title">For Those Next</h2>
         <p><i>Tyler Thomas</p></i>
 
         <p>Concrete catacombs scarred the planet. For longer than I could track time, great storms wore on the city’s skeletons. Dunes swallowed coastlines, forests overtook deserts, and arctic frost spread from the poles like a colony of ravenous mold. Processes that once took eons passed in a lifetime, but I saw none of it.</p>
@@ -322,5 +366,6 @@
 
         <p>For those the Earth nurtures next, when you find the root-wrapped bones of the last human resting beneath the soil, may you look to his people without pity nor scorn. Have reverence for the forebearers whose terminal mistakes caught up to them. Learn to treat her right, and never forget how delicate your existence can truly be.</p>
     </div>
+</article>
 </body>
 </html>
