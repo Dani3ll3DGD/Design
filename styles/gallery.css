@@ -295,7 +295,7 @@
 			justify-content: center; gap: 1.5rem; padding: 2rem 0;
 		}
 
-		.lightbox-num { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; color: rgba(245,240,232,0.08); line-height: 1; }
+		/* .lightbox-num { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; color: rgba(245,240,232,0.08); line-height: 1; } */
 		.lightbox-title { font-family: 'DM Serif Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.1; }
 		.lightbox-artist { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--acid-yellow); }
 		.lightbox-desc { font-size: 0.78rem; line-height: 1.9; color: rgba(245,240,232,0.55); }
@@ -361,6 +361,10 @@
 			.lightbox-close { top: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.4rem 0.75rem; }
 
 			footer { padding: 2rem 1.5rem; }
+			/* The class below was pushing images above the top of a mobile device */
+			.lightbox-num {
+				display: none;
+			}
 		}
 
 		@media (max-width: 480px) {
